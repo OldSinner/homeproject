@@ -15,6 +15,14 @@ import {
   SiDotnet,
   SiGithub,
   SiJquery,
+  SiWindowsterminal,
+  SiWindows,
+  SiUnity,
+  SiSass,
+  SiVisualstudiocode,
+  SiNodedotjs,
+  SiMdnwebdocs,
+  SiMysql,
 } from "react-icons/si";
 import "./App.css";
 function App() {
@@ -29,6 +37,14 @@ function App() {
     SiDotnet,
     SiGithub,
     SiJquery,
+    SiWindowsterminal,
+    SiWindows,
+    SiUnity,
+    SiSass,
+    SiVisualstudiocode,
+    SiNodedotjs,
+    SiMdnwebdocs,
+    SiMysql,
   ];
   console.log(icons);
   return (
@@ -47,22 +63,30 @@ function App() {
           >
             <img src={stars} className="h-full object-cover"></img>
           </ParallaxLayer>
+
           <ParallaxLayer offset={0} speed={0.5} factor={1}>
             <Moon></Moon>
           </ParallaxLayer>
           {/* Icons */}
-          {icons.map((icon, index) => (
-            <ParallaxLayer
-              offset={0.9 + index / 100}
-              speed={0.3 + index / 10}
-              factor={0.5}
-              className="text-4xl"
-            >
-              <div style={{ marginLeft: 10 + index * 100 }}>{icon.apply()}</div>
-            </ParallaxLayer>
-          ))}
+          <ParallaxLayer
+            offset={1}
+            speed={0.3}
+            factor={0.5}
+            className="text-4xl"
+          >
+            <div>
+              <h1 className="text-center">Skills and interests</h1>
+              <div className="grid grid-cols-fill-40 content-center justify-center w-full">
+                {icons.map((icon) => (
+                  <div className="self-centers flex justify-center mt-5">
+                    {icon.apply()}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </ParallaxLayer>
 
-          <ParallaxLayer offset={1.5} speed={0.5}>
+          <ParallaxLayer offset={2} speed={0.5}>
             <h2>about</h2>
           </ParallaxLayer>
           <ParallaxLayer offset={2} speed={1}>
