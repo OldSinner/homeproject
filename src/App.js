@@ -51,13 +51,13 @@ function App() {
     <>
       <div className="w-full h-full flex flex-column m-0 overflow-clip text-white">
         <Parallax
-          pages={4}
+          pages={6}
           className=" w-full relative no-scrollbar"
           style={{ scrollbarWidth: "none" }}
         >
           <ParallaxLayer
             offset={0}
-            factor={5}
+            factor={7}
             speed={0.1}
             // style={{ backgroundImage: `url(${stars})` }}
           >
@@ -96,9 +96,9 @@ function App() {
             <h2>contact</h2>
           </ParallaxLayer>
           <ParallaxLayer
-            offset={3}
+            offset={5.1}
             factor={1}
-            speed={0.1}
+            speed={0.4}
             // style={{ backgroundImage: `url(${stars})` }}
           >
             <img src={grass} className="h-full w-full object-cover"></img>
