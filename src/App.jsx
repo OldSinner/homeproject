@@ -4,11 +4,12 @@ import Moon from "./Components/Moon";
 import stars from "./Assets/stars.jpg";
 import grass from "./Assets/grass.png";
 import astro from "./Assets/astro.webp";
-import iss from "./Assets/iss.png";
 
 import "./App.css";
-import Skills from "./Components/Skills";
 import About from "./Components/About";
+import ProjectTemplate, {
+  TechStack,
+} from "./Components/Projects/ProjectTemplate";
 function App() {
   return (
     <>
@@ -37,17 +38,31 @@ function App() {
           </ParallaxLayer>
           {/* Icons */}
 
-          <ParallaxLayer offset={1} speed={0.3} factor={1}>
+          <ParallaxLayer offset={1} speed={1} factor={1}>
             <About />
           </ParallaxLayer>
-          <ParallaxLayer
-            offset={2.2}
-            speed={0.7}
-            factor={0.5}
-            className="text-4xl"
-          >
-            <Skills />
+          <ParallaxLayer offset={2} speed={0.5} factor={1}>
+            <h1 className="text-center text-4xl md:-mb-20">Projects</h1>
           </ParallaxLayer>
+
+          <ParallaxLayer offset={2.1} speed={0.5} factor={1}>
+            <ProjectTemplate
+              title={"Typescript Physical Engine"}
+              backdrop="bg-ph"
+              techStack={
+                <>
+                  <TechStack>TS</TechStack>
+                  <TechStack>p5.js</TechStack>
+                </>
+              }
+            >
+              <h2 className="p-5">
+                Physical engine showing basic physical laws in two-dimensional
+                space inside the canvas.
+              </h2>
+            </ProjectTemplate>
+          </ParallaxLayer>
+
           <ParallaxLayer
             offset={5.1}
             factor={1}

@@ -23,8 +23,13 @@ module.exports = {
     },
     backgroundImage: {
       stars: "url('./Assets/stars.jpg')",
+      ph: "url('./Assets/ph.jpg')",
     },
-    extend: {},
+    extend: {
+      backdropGrayscale: {
+        50: "0.1",
+      },
+    },
   },
   plugins: [],
 };
