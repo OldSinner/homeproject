@@ -4,12 +4,29 @@ import Moon from "./Components/Moon";
 import stars from "./Assets/stars.jpg";
 import grass from "./Assets/grass.png";
 import astro from "./Assets/astro.webp";
-
+import { SiGithub } from "react-icons/si";
 import "./App.css";
 import About from "./Components/About";
 import ProjectTemplate, {
   TechStack,
 } from "./Components/Projects/ProjectTemplate";
+
+const Projects = [
+  {
+    title: "Typescript Physical Engine",
+    techStack: ["TS", "p5.js"],
+    links: [
+      {
+        icon: <SiGithub></SiGithub>,
+        link: "https://github.com/OldSinner/TSPhysicsPlayground",
+      },
+    ],
+    backdrop: "bg-ph",
+    describe:
+      "Physical engine showing basic physical laws in two-dimensional space inside the canvas.",
+  },
+];
+
 function App() {
   return (
     <>
@@ -28,44 +45,33 @@ function App() {
             <img src={stars} className="h-full object-cover"></img>
           </ParallaxLayer>
 
-          <ParallaxLayer offset={0} speed={0.5} factor={1}>
+          <ParallaxLayer offset={0} speed={1.5} factor={1}>
             <Moon></Moon>
           </ParallaxLayer>
-          <ParallaxLayer
-            offset={1}
-            speed={1}
-            factor={5}
-            sticky={{ start: 1, end: 4 }}
-          >
-            <div className="ml-48  flex items-center">
-              <img src={astro} className="w-1/2 md:ml-96 md:w-1/4 " />
-            </div>
-          </ParallaxLayer>
-          {/* Icons */}
 
-          <ParallaxLayer offset={1} speed={1} factor={1}>
+          <ParallaxLayer offset={0.9} speed={1} factor={1}>
             <About />
           </ParallaxLayer>
-          <ParallaxLayer offset={2} speed={0.5} factor={1}>
+          <ParallaxLayer offset={1.4} speed={0.7} factor={1}>
             <h1 className="text-center text-4xl md:-mb-20">Projects</h1>
           </ParallaxLayer>
 
-          <ParallaxLayer offset={2.1} speed={0.5} factor={1}>
-            <ProjectTemplate
-              title={"Typescript Physical Engine"}
-              backdrop="bg-ph"
-              techStack={
-                <>
-                  <TechStack>TS</TechStack>
-                  <TechStack>p5.js</TechStack>
-                </>
-              }
-            >
-              <h2 className="p-5">
-                Physical engine showing basic physical laws in two-dimensional
-                space inside the canvas.
-              </h2>
-            </ProjectTemplate>
+          <ParallaxLayer offset={1.5} speed={0.7} factor={1}>
+            {Projects.map((project) => (
+              <ProjectTemplate
+                title={project.title}
+                backdrop={project.backdrop}
+                techStack={
+                  <>
+                    {project.techStack.map((tech) => (
+                      <TechStack>{tech}</TechStack>
+                    ))}
+                  </>
+                }
+              >
+                <h2 className="p-5">{project.describe}</h2>
+              </ProjectTemplate>
+            ))}
           </ParallaxLayer>
 
           <ParallaxLayer
