@@ -18,17 +18,9 @@ module.exports = {
       "2xl": "1536px",
       // => @media (min-width: 1536px) { ... }
     },
-    gridTemplateColumns: {
-      "fill-40": "repeat(auto-fill, 10rem)",
-    },
     backgroundImage: {
-      stars: "url('./Assets/stars.jpg')",
-      ph: "url('./Assets/ph.jpg')",
-    },
-    extend: {
-      backdropGrayscale: {
-        50: "0.1",
-      },
+      // stars: "url('./Assets/stars.jpg')",
+      // ph: "url('./Assets/ph.jpg')",
     },
   },
   plugins: [],
