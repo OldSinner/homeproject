@@ -31,9 +31,14 @@ function App() {
           <ParallaxLayer offset={0} speed={0.5} factor={1}>
             <Moon></Moon>
           </ParallaxLayer>
-          <ParallaxLayer offset={1} speed={0.9} factor={1.5}>
+          <ParallaxLayer
+            offset={1}
+            speed={1}
+            factor={5}
+            sticky={{ start: 1, end: 4 }}
+          >
             <div className="ml-48  flex items-center">
-              <img src={astro} className="w-1/2 md:ml-96 md:w-1/4" />
+              <img src={astro} className="w-1/2 md:ml-96 md:w-1/4 " />
             </div>
           </ParallaxLayer>
           {/* Icons */}
