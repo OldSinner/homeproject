@@ -7,3 +7,6 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+.textshadow {
+  text-shadow: 0px 0px 5px rgba(66, 68, 90, 1);
+}

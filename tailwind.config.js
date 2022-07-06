@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     screens: {
@@ -21,6 +22,19 @@ module.exports = {
     backgroundImage: {
       // stars: "url('./Assets/stars.jpg')",
       // ph: "url('./Assets/ph.jpg')",
+      lp: "url('./Assets/launch.jpg')",
+    },
+    extend: {
+      animation: {
+        fade: "fadeIn 5s cubic-bezier(0.4, 0, 0.6, 1) ",
+      },
+
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
+      },
     },
   },
   plugins: [],
