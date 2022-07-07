@@ -26,7 +26,8 @@ module.exports = {
     },
     extend: {
       animation: {
-        fade: "fadeIn 5s cubic-bezier(0.4, 0, 0.6, 1) ",
+        fade: "fadeIn 1s cubic-bezier(0.4, 0, 0.6, 1) ",
+        longfade: "fadeIn 3s cubic-bezier(0.4, 0, 0.6, 1) ",
       },
 
       keyframes: {

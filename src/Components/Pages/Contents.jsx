@@ -1,4 +1,4 @@
-import PlanetMenu from "./PlanetMenu";
+import PlanetMenu from "../Elements/PlanetMenu";
 
 const Contents = () => {
   return (
