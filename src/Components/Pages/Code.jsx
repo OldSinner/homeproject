@@ -1,3 +1,4 @@
+import MatrixEffect from "../Elements/MatrixEffect";
 import GitHubSections from "./Sections/GitHubSections";
 
 const Code = () => {
@@ -6,6 +7,7 @@ const Code = () => {
       <div className=" text-4xl md:text-6xl">About My Coding</div>
       <div className="flex flex-col md:flex-row justify-around">
         <GitHubSections />
+        <MatrixEffect text={"Przybierzeli Do betlejem"} />
       </div>
     </div>
   );
