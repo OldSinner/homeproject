@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
-const Counter = ({ value, afterText, timeDif = 10 }) => {
+const Counter = ({ value, afterText, timeDif = 10, space }) => {
   if (afterText == undefined) afterText = "";
   const [count, setCount] = useState(0);
   let currentValue = 0;
@@ -18,7 +18,8 @@ const Counter = ({ value, afterText, timeDif = 10 }) => {
   useEffect(() => {
     startValue();
   }, [value]);
-  return <div>{count + " " + afterText}</div>;
+  if (space) return <div>{count + " " + afterText}</div>;
+  else return <div>{count + afterText}</div>;
 };
 
 export default Counter;

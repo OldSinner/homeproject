@@ -40,11 +40,13 @@ const GitHubSections = () => {
       <Counter
         afterText={"Public Repos"}
         value={gitRepos?.length}
+        space
         timeDif={200}
       />
-      <Counter value={commits} afterText={"Commits"} timeDif={20} />
+      <Counter value={commits} afterText={"Commits"} timeDif={20} space />
       <Counter
         afterText={"Months of programming"}
+        space
         value={getDate()}
         timeDif={200}
       />
