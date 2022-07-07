@@ -1,5 +1,5 @@
 import "../App.css";
-const LaunchPage = ({ ok, ref }) => {
+const LaunchPage = () => {
   //   const [commits, setCommits] = useState(0);
   //   const config = {
   //     headers: { Authorization: `Bearer ${Token}` },
@@ -13,7 +13,7 @@ const LaunchPage = ({ ok, ref }) => {
   //       .catch((err) => {});
   //   }, []);
   return (
-    <div className="dark:bg-black dark:text-white h-full w-full font-mono flex flex-col items-center justify-evenly ">
+    <div className=" h-full w-full font-mono flex flex-col items-center justify-evenly ">
       <div className=" animate-fade ">
         <div className=" text-center   p-10 ">
           <div className=" text-4xl md:text-6xl p-1">MAKSYMILIAN PRZYSIWEK</div>
