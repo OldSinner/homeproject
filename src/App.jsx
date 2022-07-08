@@ -6,12 +6,14 @@ import Contents from "./Components/Pages/Contents";
 import AboutMe from "./Components/Pages/AboutMe";
 import Code from "./Components/Pages/Code";
 import { Waypoint } from "react-waypoint";
+import Technoglogies from "./Components/Pages/Technologies";
 
 function App() {
   const [dark, setdark] = useState(true);
   const [showContent, setshowContent] = useState(false);
   const [showCode, setshowCode] = useState(false);
   const [showAboutMe, setshowAboutMe] = useState(false);
+  const [showTech, setshowTech] = useState(false);
 
   const setState = () => {
     setdark(!dark);
@@ -48,6 +50,14 @@ function App() {
             }}
           />
           {showCode ? <Code /> : null}
+        </section>
+        <section className="snap-center w-full h-full mt-10" id={"Tech"}>
+          <Waypoint
+            onEnter={() => {
+              setshowTech(true);
+            }}
+          />
+          {showTech ? <Technoglogies /> : null}
         </section>
       </div>
     </div>

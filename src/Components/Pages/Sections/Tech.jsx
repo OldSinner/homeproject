@@ -35,10 +35,17 @@ const Tech = () => {
       }
     }
     console.log("Everything is loaded");
-    setC(LangData["C#"]);
-    setTs(LangData["TypeScript"]);
-    setJs(LangData["JavaScript"]);
-    setHt(LangData["HTML"]);
+    const sum =
+      LangData["C#"] +
+      LangData["JavaScript"] +
+      LangData["TypeScript"] +
+      LangData["HTML"];
+    console.log(sum);
+    console.log(LangData);
+    setC((LangData["C#"] * 100) / sum);
+    setTs((LangData["TypeScript"] * 100) / sum);
+    setJs((LangData["JavaScript"] * 100) / sum);
+    setHt((LangData["HTML"] * 100) / sum);
   }
   useEffect(() => {
     fetchData();
@@ -48,14 +55,15 @@ const Tech = () => {
     <div className="p-5 flex flex-col md:text-2xl m-5">
       <div className="text-2xl md:text-4xl"> CodeStats:</div>
       <div className="flex flex-row">
+        JavaScript: <Counter value={Js} afterText={"%"}></Counter>
+      </div>
+      <div className="flex flex-row">
         C#: <Counter value={C} afterText={"%"}></Counter>
       </div>
       <div className="flex flex-row">
         TypeScript: <Counter value={Ts} afterText={"%"}></Counter>
       </div>
-      <div className="flex flex-row">
-        JavaScript: <Counter value={Js} afterText={"%"}></Counter>
-      </div>
+
       <div className="flex flex-row">
         HTML: <Counter value={Ht} afterText={"%"}></Counter>
       </div>
