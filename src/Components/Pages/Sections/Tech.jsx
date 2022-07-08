@@ -54,18 +54,24 @@ const Tech = () => {
   return (
     <div className="p-5 flex flex-col md:text-2xl m-5">
       <div className="text-2xl md:text-4xl"> CodeStats:</div>
-      <div className="flex flex-row">
-        JavaScript: <Counter value={Js} afterText={"%"}></Counter>
+      <div className="flex flex-row justify-center">
+        JavaScript:{" "}
+        <Counter value={Js} afterText={"%"} step={0.2} decimals={1}></Counter>
       </div>
-      <div className="flex flex-row">
-        C#: <Counter value={C} afterText={"%"}></Counter>
+      <div className="flex flex-row justify-center">
+        C#:{" "}
+        <Counter value={C} afterText={"%"} step={0.2} decimals={1}></Counter>
       </div>
-      <div className="flex flex-row">
-        TypeScript: <Counter value={Ts} afterText={"%"}></Counter>
+      <div className="flex flex-row justify-center">
+        TypeScript:{" "}
+        <Counter value={Ts} afterText={"%"} step={0.2} decimals={1}>
+          {" "}
+        </Counter>
       </div>
 
-      <div className="flex flex-row">
-        HTML: <Counter value={Ht} afterText={"%"}></Counter>
+      <div className="flex flex-row justify-center">
+        HTML:{" "}
+        <Counter value={Ht} afterText={"%"} step={0.2} decimals={1}></Counter>
       </div>
     </div>
   );

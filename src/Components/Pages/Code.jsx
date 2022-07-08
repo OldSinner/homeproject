@@ -11,7 +11,7 @@ const Code = () => {
         {faker.lorem.sentences(8)}
       </div>
 
-      <div className="animate-fade flex flex-col md:flex-row justify-around">
+      <div className="animate-fade text-center flex flex-col md:flex-row justify-around">
         <GitHubSections />
         <Tech />
       </div>

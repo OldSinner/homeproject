@@ -7,6 +7,8 @@ import AboutMe from "./Components/Pages/AboutMe";
 import Code from "./Components/Pages/Code";
 import { Waypoint } from "react-waypoint";
 import Technoglogies from "./Components/Pages/Technologies";
+import Art from "./Components/Pages/Art";
+import Contact from "./Components/Pages/Contact";
 
 function App() {
   const [dark, setdark] = useState(true);
@@ -14,6 +16,8 @@ function App() {
   const [showCode, setshowCode] = useState(false);
   const [showAboutMe, setshowAboutMe] = useState(false);
   const [showTech, setshowTech] = useState(false);
+  const [showArt, setshowArt] = useState(false);
+  const [showContact, setshowContact] = useState(false);
 
   const setState = () => {
     setdark(!dark);
@@ -58,6 +62,22 @@ function App() {
             }}
           />
           {showTech ? <Technoglogies /> : null}
+        </section>
+        <section className="snap-center w-full h-full mt-10" id={"Tech"}>
+          <Waypoint
+            onEnter={() => {
+              setshowArt(true);
+            }}
+          />
+          {showArt ? <Art /> : null}
+        </section>
+        <section className="snap-center w-full h-full mt-10" id={"Tech"}>
+          <Waypoint
+            onEnter={() => {
+              setshowContact(true);
+            }}
+          />
+          {showContact ? <Contact /> : null}
         </section>
       </div>
     </div>
