@@ -14,7 +14,7 @@ const LaunchPage = () => {
           </div>
           <div className=" text-sm md:text-2xl p-1">
             <MatrixEffect
-              text={"            Simplicity is the key to victory"}
+              text={"            Nature is pleased with simplicity"}
             ></MatrixEffect>
           </div>
         </div>
