@@ -8,7 +8,7 @@ import {
 } from "react-icons/si";
 const Contact = () => {
   return (
-    <div className=" h-full w-full font-mono flex flex-col items-center justify-evenly ">
+    <div className="animate-fade h-full w-full font-mono flex flex-col items-center justify-evenly ">
       <div className=" text-4xl md:text-6xl">Contact Me</div>
       <div className="p-5 text-center text-base md:text-2xl flex flex-col justify-center">
         <a

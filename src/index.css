@@ -19,3 +19,6 @@ code {
   width: 0px; /* Mostly for vertical scrollbars */
   height: 0px; /* Mostly for horizontal scrollbars */
 }
+html {
+  scroll-behavior: smooth;
+}
