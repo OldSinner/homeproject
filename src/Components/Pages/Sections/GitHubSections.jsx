@@ -1,17 +1,12 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import Counter from "../../Elements/Counter";
-import { Token } from "../../Elements/Token";
 import axios from "axios";
 
 const GitHubSections = () => {
   const [commits, setCommits] = useState(0);
   const [gitUser, setgistUser] = useState();
   const [gitRepos, setGitRepos] = useState();
-
-  const config = {
-    headers: { Authorization: `Bearer ${Token}` },
-  };
 
   const getDate = () => {
     const date = new Date();
@@ -21,13 +16,13 @@ const GitHubSections = () => {
 
   useEffect(() => {
     axios
-      .get("https://api.github.com/search/commits?q=author:OldSinner", config)
+      .get("https://api.github.com/search/commits?q=author:OldSinner")
       .then((res) => {
         setCommits(res.data.total_count);
       })
       .catch((err) => {});
     axios
-      .get("https://api.github.com/users/OldSinner/repos", config)
+      .get("https://api.github.com/users/OldSinner/repos")
       .then((res) => {
         setGitRepos(res.data);
       })

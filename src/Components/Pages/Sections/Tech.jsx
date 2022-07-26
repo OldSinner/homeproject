@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { Token } from "../../Elements/Token";
+
 import axios from "axios";
 import MatrixEffect from "../../Elements/MatrixEffect";
 import Counter from "../../Elements/Counter";
@@ -17,16 +17,10 @@ const Tech = () => {
   const [Js, setJs] = useState(0);
   const [Ht, setHt] = useState(0);
 
-  const config = {
-    headers: { Authorization: `Bearer ${Token}` },
-  };
   async function fetchData() {
-    let res = await axios.get(
-      "https://api.github.com/users/OldSinner/repos",
-      config
-    );
+    let res = await axios.get("https://api.github.com/users/OldSinner/repos");
     for (let i = 0; i < res.data.length; i++) {
-      let response = await axios.get(res.data[i].languages_url, config);
+      let response = await axios.get(res.data[i].languages_url);
 
       for (var prop in LangData) {
         if (response.data.hasOwnProperty(prop)) {
